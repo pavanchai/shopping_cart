@@ -1,4 +1,4 @@
-import items from "./items.json";
+import items from "./items.js";
 import formatCurrency from "./util/formatCurrency.js";
 import addGlobalEventListener from "./util/addGlobalEventListener.js";
 import { addToCart } from "./shoppingCart.js";
@@ -14,7 +14,7 @@ export function setupStore() {
     const id = e.target.closest("[data-store-item]").dataset.itemId;
     addToCart(parseInt(id));
   });
-  console.log("pavan");
+
   items.forEach(renderStoreItem);
 }
 
